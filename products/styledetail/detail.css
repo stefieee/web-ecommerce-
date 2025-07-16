@@ -1,0 +1,27 @@
+.gallery-scroll {
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb {
+  background-color: #b79e78;
+  border-radius: 3px;
+}
+
+.gallery-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #b79e78 transparent;
+}
+
+.gallery-scroll > div {
+  scroll-snap-align: center;
+}
+
+.preview-img {
+  object-fit: cover;
+}

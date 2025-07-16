@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styledetail/detail.css" />
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-6">
+
+  <main class="max-w-6xl w-full bg-white rounded-lg shadow-md grid grid-cols-1 md:grid-cols-12 gap-8 p-6 md:p-10 relative">
+
+   
+    <a href="../index.html" class="absolute top-3 left-[-20px] bg-[#b79e78] hover:bg-[#a68b6a] text-white p-2 rounded-full shadow-md transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </a>
+
+  
+    <section class="md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-3">
+      <div class="md:col-span-2 col-span-2 row-span-2 rounded-lg overflow-hidden shadow-lg">
+        <img src="../images/populer4.avif" alt="Foto utama" class="w-full h-full object-cover" />
+      </div>
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <img src="imagesdetail/detailanak1.avif" alt="Foto closeup" class="w-full h-full object-cover preview-img" />
+      </div>
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <img src="imagesdetail/detailanak2.avif" alt="Detail produk" class="w-full h-full object-cover preview-img" />
+      </div>
+    </section>
+
+  
+    <section class="md:col-span-5 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between mb-5">
+          <h1 class="text-3xl font-bold text-gray-800">Rp149.000</h1>
+          <button aria-label="Add to wishlist" class="p-2 rounded-full border border-gray-300 text-gray-600 hover:text-red-600 hover:border-red-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+              2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81
+              14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55
+              11.54L12 21.35z"/>
+            </svg>
+          </button>
+        </div>
+        <h2 class="text-xl font-semibold text-gray-700 mb-1">T-Shirt Dry Kerah Bulat | Grafis</h2>
+        <p class="text-sm text-gray-500 mb-4">8 / M · Very Good · Uniqlo Denpasar</p>
+
+        <div class="text-gray-700 leading-relaxed space-y-4 mb-6">
+          <h3 class="font-semibold text-lg border-b border-gray-300 pb-1 mb-2">Item Description</h3>
+          <p class="text-gray-600">
+Dilengkapi teknologi cepat kering. Bahan campuran katun dengan tekstur yang lembut.</p>
+        </div>
+
+        <dl class="grid grid-cols-2 gap-y-3 gap-x-6 text-gray-700 text-sm mb-8">
+          <div class="flex justify-between"><dt class="font-semibold">Category</dt><dd>Bayi</dd></div>
+          <div class="flex justify-between"><dt class="font-semibold">Size</dt><dd>S/M/L</dd></div>
+          <div class="flex justify-between"><dt class="font-semibold">Condition</dt><dd>Very Good</dd></div>
+          <div class="flex justify-between"><dt class="font-semibold">Color</dt><dd>Yellow, Blue</dd></div>
+          <div class="flex justify-between"><dt class="font-semibold">Uploaded</dt><dd>5 hours ago</dd></div>
+          <div class="flex justify-between"><dt class="font-semibold">Shipping</dt><dd>Rp20.000</dd></div>
+        </dl>
+      </div>
+
+     
+      <div class="space-y-3">
+        <button type="button" class="w-full bg-[#b79e78] hover:bg-[#a68b6a] focus:ring-2 focus:ring-[#b79e78] focus:ring-offset-1 text-white py-3 rounded-lg font-semibold transition">
+          Buy Now
+        </button>
+        <button type="button" class="w-full border border-[#b79e78] text-[#b79e78] hover:bg-[#f9f4ef] focus:ring-2 focus:ring-[#b79e78] focus:ring-offset-1 py-3 rounded-lg font-semibold transition">
+          Add to Cart
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="jsdetail/detail.js"></script>
+</body>
+</html>

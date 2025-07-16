@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Profile - Account Settings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-[#f4eee6] p-6">
+
+ <button id="menuToggle" class="md:hidden fixed top-4 left-4 z-50 w-10 h-10 bg-[#b79e78] text-white rounded-md shadow-md flex items-center justify-center text-2xl">
+  ☰
+</button>
+
+
+
+  <div class="flex flex-col md:flex-row w-full max-w-7x2 mx-auto bg-white rounded-2xl shadow-lg overflow-hidden min-h-[90vh]">
+
+    <nav id="sidebarMenu" class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-1/4 bg-[#f4eee6] md:bg-[#f4eee6] bg-opacity-100 pt-20 md:pt-6 p-6 md:rounded-l-2xl shadow-inner z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
+
+      <h2 class="text-[#b79e78] text-xl font-bold mb-6">Settings</h2>
+      <ul class="space-y-4 text-[#555] font-medium text-sm">
+        <li class="bg-[#b79e78] text-white py-2 px-4 rounded-lg shadow-md">Account</li>
+        <li class="hover:bg-[#b79e78] hover:text-white py-2 px-4 rounded-lg cursor-pointer">Notifications</li>
+        <li class="hover:bg-[#b79e78] hover:text-white py-2 px-4 rounded-lg cursor-pointer">Privacy</li>
+        <li class="hover:bg-[#b79e78] hover:text-white py-2 px-4 rounded-lg cursor-pointer">Languages</li>
+        <li class="hover:bg-[#b79e78] hover:text-white py-2 px-4 rounded-lg cursor-pointer">Log Out</li>
+        <li class="hover:bg-[#b79e78] hover:text-white py-2 px-4 rounded-lg cursor-pointer">Help</li>
+      </ul>
+    </nav>
+
+    <section class="flex-1 p-6 sm:p-10">
+
+      <header class="flex justify-end items-center gap-4 text-sm text-[#444] font-semibold mb-6">
+        <a href="../../index.html" class="hover:text-[#b79e78]">Home</a>
+        <a href="../userp/login.html" class="hover:text-[#b79e78]">Login</a>
+        <a href="../userp/regrister.html" class="hover:text-[#b79e78]">Register</a>
+      </header>
+
+      <h1 class="text-2xl font-bold text-[#222] mb-6">Account Settings</h1>
+
+      <form class="space-y-10">
+        <section>
+          <h3 class="text-[#b79e78] text-lg font-semibold border-b border-[#b79e7860] pb-1 mb-4">Basic Info</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center mb-6">
+            <span class="font-medium text-sm text-[#444]">Profile Picture</span>
+            <img src="../../images/profileuser.png" alt="Profile picture" class="w-28 h-28 rounded-full object-cover justify-self-start" />
+            <div class="flex flex-col text-sm font-semibold">
+              <button type="button" class="text-[#b79e78] underline text-left">Upload new picture</button>
+              <button type="button" class="text-[#b75a17] underline text-left">Remove</button>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex justify-between items-center border-b border-[#b79e7820] pb-2">
+              <span class="text-sm text-[#444]">Name</span>
+              <span class="text-sm text-[#222]"></span>
+            </div>
+            <div class="flex justify-between items-center border-b border-[#b79e7820] pb-2">
+              <span class="text-sm text-[#444]">Date of Birth</span>
+              <span class="text-sm text-[#222]"></span>
+            </div>
+            <div class="flex justify-between items-center border-b border-[#b79e7820] pb-2">
+              <span class="text-sm text-[#444]">Gender</span>
+              <span class="text-sm text-[#222]"></span>
+            </div>
+            <div class="flex justify-between items-center border-b border-[#b79e7820] pb-2">
+              <span class="text-sm text-[#444]">Email</span>
+              <span class="text-sm text-[#222]"></span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="text-[#b79e78] text-lg font-semibold border-b border-[#b79e7860] pb-1 mb-4">Account Info</h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center border-b border-[#b79e7820] pb-2">
+              <span class="text-sm text-[#444]">Username</span>
+              <span class="text-sm text-[#222]"></span>
+            </div>
+            <div class="flex justify-between items-center border-b border-[#b79e7820] pb-2">
+              <span class="text-sm text-[#444]">Password</span>
+              <span class="text-sm text-[#222]"></span>
+            </div>
+          </div>
+        </section>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebarMenu');
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+  </script>
+
+</body>

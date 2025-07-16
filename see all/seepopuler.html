@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vintage - See All Products</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="../see all/pupuler.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f9f6f1;
+      color: #3f322a;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: background-image 1.5s ease-in-out;
+      z-index: -1;
+    }
+
+   
+
+    .background.photo1 {
+      background-image: url('../backgroundpict/backgrounduniqlo1.jpg');
+    }
+
+    .background.photo2 {
+      background-image: url('../backgroundpict/backgrounduniqlo2.jpg');
+    }
+
+    .background.photo3 {
+      background-image: url('../backgroundpict/backgrounduniqlo3.jpg');
+    }
+
+    .background.photo4 {
+      background-image: url('../backgroundpict/backgrounduniqlo4.jpg');
+    }
+
+    .thumbnail-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+      z-index: 10;
+    }
+
+    .thumbnail {
+      width: 100px;
+      height: 75px;
+      border-radius: 5px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 1s ease;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.0);
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background default"></div>
+
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <h1 class="text-xl font-bold text-[#3f322a]">VINTAGE</h1>
+    <nav class="hidden md:flex gap-12 text-sm font-semibold text-[#3f322a]">
+      <a href="../index.html" class="hover:underline">Home</a>
+      <a href="../see all/newprod.html" class="hover:underline">See New</a>
+      <a href="#" class="hover:underline">Contact</a>
+    </nav>
+    <div class="relative md:hidden">
+      <button id="navToggle" class="text-[#3f322a] focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div id="mobileMenu"
+
+        class="hidden absolute top-10 right-0 flex flex-col bg-white shadow-lg rounded-lg px-4 py-2 text-[#3f322a] font-semibold text-sm z-50">
+        <a href="../index.html" class="hover:underline">Home</a>
+        <a href="../see all/newprod.html" class="hover:underline">New</a>
+        <a href="#" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    function changeBackground(photoClass) {
+      const background = document.querySelector('.background');
+      background.className = 'background ' + photoClass;
+    }
+  </script>
+
+  <main role="main" tabindex="-1" aria-label="All Vintage Uniqlo Clothing Products">
+    <h2 class="section-title">See Popular Product</h2>
+
+    <nav class="category-nav flex gap-6 flex-wrap items-center mt-4 text-sm font-semibold text-[#3f322a]" aria-label="Product categories">
+      <a href="seepopuler.html" class="hover:underline">
+        <span class="active" aria-current="page">Popular</span>
+      </a>
+      <a href="newprod.html" class="hover:underline">
+        <span>New</span>
+      </a>
+      <a href="../products/all.html" class="hover:underline">
+        <span>All</span>
+      </a>
+    </nav>
+
+    <section class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4 mt-6">
+      <article class="product-card relative shadow-md">
+        <img src="../images/populer(1).avif" alt="AIRism Katun" onerror="this.onerror=null;this.src='../images/default.jpg';" />
+        <div class="product-label">AIRism Katun</div>
+        <a href="../products/detail.html"><button class="shop-btn">Shop</button></a>
+      </article>
+
+      <article class="product-card relative shadow-md">
+        <img src="../images/populer2.avif" alt="Kemeja Polo" onerror="this.onerror=null;this.src='../images/default.jpg';" />
+        <div class="product-label">Kemeja Polo</div>
+        <a href="../products/detail2.html"><button class="shop-btn">Shop</button></a>
+      </article>
+
+      <article class="product-card relative shadow-md">
+        <img src="../images/populer3.avif" alt="CHIIKAWA" onerror="this.onerror=null;this.src='../images/default.jpg';" />
+        <div class="product-label">CHIIKAWA</div>
+        <a href="../products/detail3.html"><button class="shop-btn">Shop</button></a>
+      </article>
+
+      <article class="product-card relative shadow-md">
+        <img src="../images/populer4.avif" alt="T-Shirt Dry" onerror="this.onerror=null;this.src='../images/default.jpg';" />
+        <div class="product-label">T-Shirt Dry</div>
+        <a href="../products/detail4.html"><button class="shop-btn">Shop</button></a>
+      </article>
+
+      <article class="product-card relative shadow-md">
+        <img src="../images/populer5.avif" alt="UT Gundam" onerror="this.onerror=null;this.src='../images/default.jpg';" />
+        <div class="product-label">UT Gundam</div>
+        <a href="../products/detail5.html"><button class="shop-btn">Shop</button></a>
+      </article>
+
+      <article class="product-card relative shadow-md">
+        <img src="../images/populer6.avif" alt="UT Archive" onerror="this.onerror=null;this.src='../images/default.jpg';" />
+        <div class="product-label">UT Archive</div>
+        <a href="../products/detail6.html"><button class="shop-btn">Shop</button></a>
+      </article>
+    </section>
+
+   <div class="text-center mt-12">
+  <p class="text-lg font-semibold text-[#3f322a] mb-4">Choose your background</p>
+  <div class="thumbnail-container">
+    <div class="thumbnail" onmouseover="changeBackground('photo1')">
+      <img src="../images/populer(1).avif" alt="Thumbnail 1" />
+    </div>
+    <div class="thumbnail" onmouseover="changeBackground('photo2')">
+      <img src="../images/populer2.avif" alt="Thumbnail 2" />
+    </div>
+    <div class="thumbnail" onmouseover="changeBackground('photo3')">
+      <img src="../images/populer3.avif" alt="Thumbnail 3" />
+    </div>
+    <div class="thumbnail" onmouseover="changeBackground('photo4')">
+      <img src="../images/populer4.avif" alt="Thumbnail 4" />
+    </div>
+  </div>
+</div>
+  </main>
+
+  <footer class="bg-[#b79e78] text-white px-6 py-10 mt-12">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 border-b border-[#a68f6b] pb-8">
+        <div>
+          <h5 class="text-lg font-bold mb-4">Vintage</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:underline">About us</a></li>
+            <li><a href="#" class="hover:underline">Sustainability</a></li>
+            <li><a href="#" class="hover:underline">Blog</a></li>
+            <li><a href="#" class="hover:underline">Advertising</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-lg font-bold mb-4">Discover</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:underline">How it works</a></li>
+            <li><a href="#" class="hover:underline">Help center</a></li>
+            <li><a href="#" class="hover:underline">Infoboard</a></li>
+            <li><a href="#" class="hover:underline">Mobile apps</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-lg font-bold mb-4">Help</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:underline">Help center</a></li>
+            <li><a href="#" class="hover:underline">Buying</a></li>
+            <li><a href="#" class="hover:underline">Trust & Safety</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-lg font-bold mb-4">Community</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:underline">Forum</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between items-center pt-6 text-sm">
+        <div class="flex gap-4 mb-4 sm:mb-0">
+          <a href="#" class="hover:text-gray-200">
+            <i class="fab fa-whatsapp fa-lg"></i>
+          </a>
+          <a href="#" class="hover:text-gray-200">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="#" class="hover:text-gray-200">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+        <div>© Vintage, 2025</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="../cart.html"
+   class="fixed bottom-4 right-4 bg-[#b79e78] text-white rounded-full shadow-lg w-[60px] h-[60px] flex items-center justify-center z-50">
+  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+       class="bi bi-cart text-white" viewBox="0 0 16 16">
+    <path d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .49.598l-1.5 7A.5.5 0 0 1 13 13H4a.5.5 0 0 1-.49-.402L1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 6l1.313 6h8.17l1.313-6H3.102z"/>
+    <path d="M5 12a2 2 0 1 0 4 0H5zm6 0a2 2 0 1 0 4 0h-4z"/>
+  </svg>
+</a>
+
+</body>
+</html>

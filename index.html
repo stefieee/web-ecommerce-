@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vintage Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="position-relative">
+
+  <nav class="navbar navbar-expand-md navbar-light navbar-transparent sticky-top border-bottom px-4 py-3">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center gap-2">
+        <div class="logo-circle d-flex justify-content-center align-items-center">
+          <svg class="text-white" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12h8M12 8v8" stroke-linecap="round" />
+          </svg>
+        </div>
+        <span class="fw-bold fs-5 text-dark">Vintage</span>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobile">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarMobile">
+        <form class="d-flex my-9 my-md-9 me-md-4" style="width: 100%; max-width: 40rem;">
+          <input type="search" class="form-control ps-5" placeholder="Search for items" aria-label="Search">
+        </form>
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <div class="d-flex flex-column flex-md-row gap-2 mt-3 mt-md-0">
+          <a href="css/userp/profile_user.html" class="btn p-0 border-0 bg-transparent">
+            <img src="images/profileuser.png" alt="User" class="profile-icon rounded-circle" />
+          </a>
+
+          <div class="dropdown">
+            <button class="btn btn-light border dropdown-toggle w-100" data-bs-toggle="dropdown">EN</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">EN</a></li>
+              <li><a class="dropdown-item" href="#">ID</a></li>
+              <li><a class="dropdown-item" href="#">FR</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="position-relative overflow-hidden" style="min-height: 76vh; padding-top: 50px;">
+    <video id="bgVideo" class="video-bg media-visible" autoplay muted playsinline preload="auto">
+      <source src="video/uniqlo1.mp4" type="video/mp4">
+    </video>
+
+   <div class="cta-box text-center text-md-start" style="margin-top: 60px;">
+  <h1 class="fs-5 fw-bold text-dark mb-8">Ready to update your wardrobe?</h1>
+  <a href="#produk-populer" class="btn btn-brown">Shop Now</a>
+</div>
+
+  </main>
+
+  <a href="cart.html"
+    class="position-fixed bottom-0 end-0 m-4 text-white rounded-circle shadow d-flex align-items-center justify-content-center"
+    style="width: 60px; height: 60px; z-index: 1050; background-color: #b79e78;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" class="bi bi-cart" viewBox="0 0 16 16">
+      <path
+        d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .49.598l-1.5 7A.5.5 0 0 1 13 13H4a.5.5 0 0 1-.49-.402L1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 6l1.313 6h8.17l1.313-6H3.102z" />
+      <path d="M5 12a2 2 0 1 0 4 0H5zm6 0a2 2 0 1 0 4 0h-4z" />
+    </svg>
+  </a>
+
+
+
+ <section id="produk-populer" class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold m-0">Produk Populer</h2>
+      <a href="see all/seepopuler.html" class="see-all-link">See All</a>
+    </div>
+
+    <div class="slider-wrapper position-relative">
+
+      <button class="slider-btn left" aria-label="Geser ke kiri">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M15 6l-6 6 6 6" />
+        </svg>
+      </button>
+
+
+      <div class="card-slider-track d-flex overflow-auto">
+
+        <div class="slider-card">
+          <div class="card">
+            <img src="images/populer(1).avif" data-hover="products/imagesdetail/detail.2.avif" class="card-img-top"
+              alt="Produk 1">
+            <div class="card-body text-center">
+              <h5 class="card-title">AIRism Katun T-Shirt Garis Kerah Bulat</h5>
+              <p class="card-text">Rp249.000</p>
+              <a href="products/detail.html" class="btn btn-brown">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="slider-card">
+          <div class="card">
+            <img src="images/populer2.avif" data-hover="products/imagesdetail/detailpolo1.avif" class="card-img-top"
+              alt="Kemeja Polo Mini">
+            <div class="card-body text-center">
+              <h5 class="card-title">Kemeja Polo Mini Lengan Pendek</h5>
+              <p class="card-text">Rp199.000</p>
+              <a href="products/detail2.html" class="btn btn-brown">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="slider-card">
+          <div class="card">
+            <img src="images/populer3.avif" data-hover="products/imagesdetail/detailchiikawa3.png" class="card-img-top"
+              alt="CHIIKAWA x JOKE BEAR">
+            <div class="card-body text-center">
+              <h5 class="card-title">CHIIKAWA x JOKE BEAR</h5>
+              <p class="card-text">Rp149.000</p>
+              <a href="products/detail3.html" class="btn btn-brown">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="slider-card">
+          <div class="card">
+            <img src="images/populer4.avif" data-hover="products/imagesdetail/detailanak1.avif" class="card-img-top"
+              alt="T-Shirt Dry">
+            <div class="card-body text-center">
+              <h5 class="card-title">T-Shirt Dry Kerah Bulat | Grafis</h5>
+              <p class="card-text">Rp149.000</p>
+              <a href="products/detail4.html" class="btn btn-brown">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="slider-card">
+          <div class="card">
+            <img src="images/populer5.avif" data-hover="products/imagesdetail/detailUT3.png" class="card-img-top"
+              alt="UT Gundam">
+            <div class="card-body text-center">
+              <h5 class="card-title">UT Gundam Lengan Pendek</h5>
+              <p class="card-text">Rp129.000</p>
+              <a href="products/detail5.html" class="btn btn-brown">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="slider-card">
+          <div class="card">
+            <img src="images/populer6.avif" data-hover="products/imagesdetail/detailarchive1.avif" class="card-img-top"
+              alt="UT Archive Mario">
+            <div class="card-body text-center">
+              <h5 class="card-title">UT Archive Super Mario Lengan Pendek</h5>
+              <p class="card-text">Rp199.000</p>
+              <a href="products/detail6.html" class="btn btn-brown">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <button class="slider-btn right" aria-label="Geser ke kanan">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9 6l6 6-6 6" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+
+  <section class="container py-5">
+    <h2 class="mb-4 text-center fw-bold">Kategori</h2>
+    <div class="row text-center">
+      <div class="col-6 col-md-3 mb-4">
+        <a href="./kategori/wanita.html" class="text-decoration-none text-dark">
+          <div class="border rounded p-3">Wanita</div>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="border rounded p-3">Pria</div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="border rounded p-3">Anak</div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="border rounded p-3">Bayi</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold m-0">Produk Terbaru</h2>
+      <a href="see all/newprod.html" class="see-all-link">See All</a>
+    </div>
+
+
+    <div class="row g-4">
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <div class="card">
+          <img src="images/prod.avif" data-hover="products/imagesdetail/detailrayon2.avif" class="card-img-top"
+            alt="Produk Baru 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Rayon Blouse | Stripe</h5>
+            <p class="card-text">Rp399.000</p>
+            <a href="products/detail7.html" class="btn btn-brown">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <div class="card">
+          <img src="images/produk2.jpg" data-hover="products/imagesdetail/detailtreasure2.avif" class="card-img-top"
+            alt="Produk Baru 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Find Your TREASURE UT (Short Sleeve Graphic T-Shirt)</h5>
+            <p class="card-text">Rp79.000</p>
+            <a href="products/detail8.html" class="btn btn-brown">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <div class="card">
+          <img src="images/produk3.avif" data-hover="products/imagesdetail/detailkids1.avif" class="card-img-top"
+            alt="Produk Baru 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">KIDS UT Toy Story Lengan Pendek</h5>
+            <p class="card-text">Rp79.000</p>
+            <a href="products/detail9.html" class="btn btn-brown">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <div class="card">
+          <img src="images/produk4.avif" data-hover="products/imagesdetail/detailut4.avif" class="card-img-top"
+            alt="Produk Baru 4">
+          <div class="card-body text-center">
+            <h5 class="card-title">UT MoMA Art Icons Lengan Pendek</h5>
+            <p class="card-text">Rp199.000</p>
+            <a href="products/detail10.html" class="btn btn-brown">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <div class="card">
+          <img src="images/kemejaflanel1.avif" data-hover="products/imagesdetail/detailflanel1.avif"
+            class="card-img-top" alt="Produk Baru 5">
+          <div class="card-body text-center">
+            <h5 class="card-title">Kemeja Flannel | Lengan Panjang Kotak</h5>
+            <p class="card-text">Rp399.000</p>
+            <a href="products/detail11.html" class="btn btn-brown">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <div class="card">
+          <img src="images/kardigankerah.avif" data-hover="products/imagesdetail/detailkardigan1.avif"
+            class="card-img-top" alt="Produk Baru 6">
+          <div class="card-body text-center">
+            <h5 class="card-title">Kardigan Kerah Bulat Proteksi Sinar UV | Garis</h5>
+            <p class="card-text">Rp299.000</p>
+            <a href="products/detail12.html" class="btn btn-brown">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+
+    </div>
+  </section>
+
+  <script>
+    const images = document.querySelectorAll(".card-img-top");
+    images.forEach(img => {
+      const originalSrc = img.src;
+      const hoverSrc = img.getAttribute("data-hover");
+      img.addEventListener("mouseenter", () => {
+        if (hoverSrc) {
+          img.src = hoverSrc;
+        }
+      });
+      img.addEventListener("mouseleave", () => {
+        img.src = originalSrc;
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <footer class="text-white px-4 py-5 mt-5" style="background-color: #b79e78;">
+    <div class="container">
+      <div class="row row-cols-2 row-cols-sm-4 g-4 border-bottom pb-4" style="border-color: #a68f6b;">
+        <div>
+          <h5 class="fw-bold mb-3">Vintage</h5>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-decoration-none text-white">About us</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Sustainability</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Blog</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Advertising</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="fw-bold mb-3">Discover</h5>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-decoration-none text-white">How it works</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Help center</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Infoboard</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Mobile apps</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="fw-bold mb-3">Help</h5>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-decoration-none text-white">Help center</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Buying</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Trust & Safety</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="fw-bold mb-3">Community</h5>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-decoration-none text-white">Forum</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 text-sm text-white">
+        <div class="mb-3 mb-sm-0">
+          <a href="#" class="text-white me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+        <div>
+          © Vintage, 2025
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const slider = document.querySelector('.card-slider-track');
+    const btnLeft = document.querySelector('.slider-btn.left');
+    const btnRight = document.querySelector('.slider-btn.right');
+
+
+    const scrollAmount = 300;
+
+    btnLeft.addEventListener('click', () => {
+      slider.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+
+    btnRight.addEventListener('click', () => {
+      slider.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+
+</html>

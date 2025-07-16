@@ -1,0 +1,234 @@
+* {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background:#3f322a;
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    a:hover, a:focus {
+      color: #fff;
+      outline: none;
+    }
+
+  
+    .container {
+      width: 900px;
+      max-width: 90vw;
+      height: 600px;
+      display: flex;
+      box-shadow:
+        0 10px 20px rgba(0,0,0,0.4),
+        0 6px 6px rgba(0,0,0,0.3);
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.7);
+      height: 580px;
+    }
+
+ 
+    .image-side {
+  flex: 1;
+  background-image: url('../../images/loginpernak\ \(1\).jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.45);
+}
+
+
+  
+    .form-side {
+  flex: 1;
+  background: #cbbca9; 
+  display: flex;
+  flex-direction: column;
+  padding: 60px 50px;
+  color: #333; 
+}
+
+    
+    .form-side h1 {
+      margin: 0 0 6px 0;
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: #1f1a17;
+    }
+    .form-side p.subtitle {
+      margin: 0 0 30px 0;
+      color: #1f1a17;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    
+    form {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .form-group {
+      margin-bottom: 24px;
+    }
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      color: #1f1a17;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 1rem;
+      border: none;
+      border-bottom: 1px solid #4f615c;
+      background: transparent;
+      color: #1f1a17;
+      transition: border-color 0.3s ease;
+    }
+    
+    input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #cbbca9; 
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-bottom-color: #b79e78;
+  color: #1f1a17;
+}
+
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #c7b79d;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me input {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  accent-color: #1f1a17;
+  cursor: pointer;
+}
+
+.forgot-password a {
+  color: #1f1a17;
+  font-weight: 600;
+}
+
+.forgot-password a:hover,
+.forgot-password a:focus {
+  color: #333;
+  text-decoration: underline;
+}
+
+button {
+  background-color: #b79e78;
+  color: #0b1410;
+  padding: 16px 0;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+button:hover,
+button:focus {
+  background-color: #9d8666;
+  outline: none;
+  box-shadow: 0 6px 14px rgba(183, 158, 120, 0.7);
+}
+
+.tes {
+  color:#3f322a;
+}
+
+.register-link {
+  font-size: 0.9rem;
+  color: #1f1a17;
+  user-select: none;
+}
+
+.register-link strong {
+  color: #1f1a17;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.register-link strong:hover,
+.register-link strong:focus {
+  color: #3f322a;
+  text-decoration: underline;
+  outline: none;
+}
+
+body {
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px; 
+  right: 970px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #b79e78;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.back-button:hover {
+  color: #fff;
+}
+
+@media (max-width: 720px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+    border-radius: 0;
+  }
+  .image-side {
+    height: 200px;
+    flex: none;
+  }
+  .form-side {
+    padding: 40px 30px;
+  }
+}

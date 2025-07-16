@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <link href="../userp/login.css" rel="stylesheet" />
+  <style>
+    /*css responv*/
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+      }
+      .image-side {
+        height: 200px;
+        width: 100%;
+      }
+      .form-side {
+        padding: 40px 25px;
+        width: 100%;
+      }
+      .back-button {
+        right: auto;
+        left: 20px;
+        top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <a href="../../index.html" class="back-button" aria-label="Kembali ke Beranda">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="30" height="29" fill="none" viewBox="0 0 29 29" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+    Back
+  </a>
+
+
+  <div class="container" role="main" aria-label="login form container">
+    <div class="image-side" aria-hidden="true"></div>
+    <section class="form-side" aria-labelledby="loginTitle">
+      <h1 id="loginTitle">Welcome back</h1>
+      <p class="subtitle">Please enter your details.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="emailInput">E-mail</label>
+          <input type="email" id="emailInput" name="email" placeholder="Enter your e-mail" required autocomplete="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="passwordInput">Password</label>
+          <input type="password" id="passwordInput" name="password" placeholder="Enter your password" required autocomplete="current-password" />
+        </div>
+
+        <div class="options-row">
+          <label class="remember-me" for="rememberCheck">
+            <input type="checkbox" id="rememberCheck" name="remember" />
+            Remember me
+          </label>
+          <div class="forgot-password">
+            <a href="#">Forgot your password?</a>
+          </div>
+        </div>
+
+        <button type="submit">Log in</button>
+      </form>
+
+      <div class="register-link text-sm text-[#3f322a] mt-4">
+        Don't have an account?
+        <a href="../userp/regrister.html" class="tes" aria-label="Register a new account" tabindex="0">
+          Register here
+        </a>
+      </div>
+    </section>
+  </div>
+
+
+  <script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const emailInput = document.getElementById('emailInput');
+    const passwordInput = document.getElementById('passwordInput');
+
+    if (!emailInput.checkValidity()) {
+      alert('Please enter a valid email.');
+      emailInput.focus();
+      return;
+    }
+
+    if (!passwordInput.value.trim()) {
+      alert('Please enter your password.');
+      passwordInput.focus();
+      return;
+    }
+
+    alert('Login successful (form submission simulation).');
+
+    
+    this.reset();
+  });
+</script>
+
+
+</body>
+</html>

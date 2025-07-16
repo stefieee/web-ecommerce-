@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vintage - Kategori Wanita</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../see all/pupuler.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: #3f322a;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .hero-banner {
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+        }
+
+        .hero-banner h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            color: #b79e78;
+        }
+
+        html {
+  scroll-behavior: smooth;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <h1 class="text-xl font-bold text-[#3f322a]">VINTAGE</h1>
+        <nav class="hidden md:flex gap-12 text-sm font-semibold text-[#3f322a]">
+            <a href="../index.html" class="hover:underline">Home</a>
+            <a href="../see all/newprod.html" class="hover:underline">See New</a>
+            <a href="../see all/seepopuler.html" class="hover:underline">Popular</a>
+            <a href="#" class="hover:underline">Contact</a>
+        </nav>
+        <div class="relative md:hidden">
+            <button id="navToggle" class="text-[#3f322a] focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div id="mobileMenu"
+                class="hidden absolute top-10 right-0 flex flex-col bg-white shadow-lg rounded-lg px-4 py-2 text-[#b79e78] font-semibold text-sm z-50">
+                <a href="../index.html" class="hover:underline">Home</a>
+                <a href="#" class="hover:underline">New</a>
+                <a href="#" class="hover:underline">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const toggle = document.getElementById('navToggle');
+        const menu = document.getElementById('mobileMenu');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <section class="relative h-[500px] bg-center bg-cover flex items-center justify-center"
+        style="background-image: url('../kategori/img/backgrounwanita.png');">
+
+        <div class="absolute inset-0 bg-black/30 z-0"></div>
+
+
+        <div class="relative z-10 text-center px-6">
+            <h1 class="text-5xl sm:text-6xl font-bold text-white drop-shadow-lg animate-fade-in-down">
+                Uniqlo Women Collection
+            </h1>
+            <p class="mt-4 text-lg sm:text-xl text-white/90 font-light">
+                Temukan gaya Trendi mu dengan sentuhan elegan dan simpel.
+            </p>
+            <a href="#new-arrivals"
+                class="mt-6 inline-block bg-white text-[#3f322a] font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#f1e8d7] transition">
+                Belanja Sekarang
+            </a>
+        </div>
+    </section>
+
+
+    <section id="new-arrivals" class="max-w-6xl mx-auto px-4 py-12">
+        <h2 class="text-center text-2xl font-bold mb-8">Popular Product</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            <div class="bg-white shadow p-4 rounded">
+
+                <a href="../products/detail2.html" class="block hover:shadow-lg transition">
+                    <div class="bg-white shadow p-4 rounded cursor-pointer">
+                        <img src="../products/imagesdetail/polowanita.png" alt="Kemeja polo"
+                            class="w-full h-48 object-cover mb-2">
+                        <h3 class="font-semibold text-sm">Kemeja Polo</h3>
+                        <p class="text-red-500 font-bold">Rp199.000</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bg-white shadow p-4 rounded">
+                <a href="../products/detail5.html" class="block hover:shadow-lg transition">
+                    <div class="bg-white shadow p-4 rounded cursor-pointer">
+                        <img src="../products/imagesdetail/utgundamgirl1.avif" alt="Kemeja polo"
+                            class="w-full h-48 object-cover mb-2">
+                        <h3 class="font-semibold text-sm">UT Gundam Lengan Pendek</h3>
+                        <p class="text-red-500 font-bold">Rp129.000</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bg-white shadow p-4 rounded">
+                <a href="../products/detail3.html" class="block hover:shadow-lg transition">
+                    <div class="bg-white shadow p-4 rounded cursor-pointer">
+                        <img src="../products/imagesdetail/detailchiikawa3.png" alt="Kemeja polo"
+                            class="w-full h-48 object-cover mb-2">
+                        <h3 class="font-semibold text-sm">CHIIKAWA x JOKE BEAR</h3>
+                        <p class="text-red-500 font-bold">Rp149.000</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bg-white shadow p-4 rounded">
+                <a href="../products/detail6.html" class="block hover:shadow-lg transition">
+                    <div class="bg-white shadow p-4 rounded cursor-pointer">
+                        <img src="../products/imagesdetail/utgirl1.avif" alt="Kemeja polo"
+                            class="w-full h-48 object-cover mb-2">
+                        <h3 class="font-semibold text-sm">UT Super Mario Lengan Pendek</h3>
+                        <p class="text-red-500 font-bold">Rp149.000</p>
+                    </div>
+                </a>
+            </div>
+    </section>
+
+
+    <section class="bg-[#b79e78] py-8 text-center">
+        <h2 class="text-2xl font-bold text-[#3f322a] mb-2">SALE - 50% OFF</h2>
+        <p class="text-[#3f322a]">Nikmati diskon musim panas untuk koleksi wanita terbaru.</p>
+    </section>
+
+
+    <section class="max-w-6xl mx-auto px-4 py-12">
+        <h2 class="text-center text-2xl font-bold mb-8">New Product</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+
+            <div class="bg-white shadow p-4 rounded">
+                <a href="../products/detail7.html" class="block hover:shadow-lg transition">
+                    <div class="bg-white shadow p-4 rounded cursor-pointer">
+                        <img src="../products/imagesdetail/detailrayon3.avif" alt="Kemeja polo"
+                            class="w-full h-48 object-cover mb-2">
+                        <h3 class="font-semibold text-sm">Rayon Blouse | Stripe</h3>
+                        <p class="text-red-500 font-bold">Rp399.000</p>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="bg-white shadow p-4 rounded">
+                <a href="../products/detail8.html" class="block hover:shadow-lg transition">
+                    <div class="bg-white shadow p-4 rounded cursor-pointer">
+                        <img src="../products/imagesdetail/findyourtreasure4.png" alt="Kemeja polo"
+                            class="w-full h-48 object-cover mb-2">
+                        <h3 class="font-semibold text-sm">Find Your TREASURE UT</h3>
+                        <p class="text-red-500 font-bold">Rp79.000</p>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="bg-white shadow p-4 rounded">
+                <a href="../products/detail12.html" class="block hover:shadow-lg transition">
+                    <div class="bg-white shadow p-4 rounded cursor-pointer">
+                        <img src="../images/kardigankerah.avif" alt="Kemeja polo"
+                            class="w-full h-48 object-cover mb-2">
+                        <h3 class="font-semibold text-sm">Kardigan Kerah Bulat</h3>
+                        <p class="text-red-500 font-bold">Rp299.000</p>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="bg-white shadow p-4 rounded">
+                <a href="#" class="block hover:shadow-lg transition">
+                    <div class="bg-white shadow p-4 rounded cursor-pointer">
+                        <img src="../products/imagesdetail/bajugaris.avif" alt="Kemeja polo"
+                            class="w-full h-48 object-cover mb-2">
+                        <h3 class="font-semibold text-sm">AIRism Katun T-Shirt | Garis</h3>
+                        <p class="text-red-500 font-bold">Rp99.000</p>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+
+  <footer class="bg-[#b79e78] text-white px-6 py-10 mt-12">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 border-b border-[#a68f6b] pb-8">
+      <div>
+        <h5 class="text-lg font-bold mb-4">Vintage</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">About us</a></li>
+          <li><a href="#" class="hover:underline">Sustainability</a></li>
+          <li><a href="#" class="hover:underline">Blog</a></li>
+          <li><a href="#" class="hover:underline">Advertising</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-lg font-bold mb-4">Discover</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">How it works</a></li>
+          <li><a href="#" class="hover:underline">Help center</a></li>
+          <li><a href="#" class="hover:underline">Infoboard</a></li>
+          <li><a href="#" class="hover:underline">Mobile apps</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-lg font-bold mb-4">Help</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Help center</a></li>
+          <li><a href="#" class="hover:underline">Buying</a></li>
+          <li><a href="#" class="hover:underline">Trust & Safety</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-lg font-bold mb-4">Community</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Forum</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row justify-between items-center pt-6 text-sm">
+      <div class="flex gap-4 mb-4 sm:mb-0">
+        <a href="#" class="hover:text-gray-200"><i class="fab fa-whatsapp fa-lg"></i></a>
+        <a href="#" class="hover:text-gray-200"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" class="hover:text-gray-200"><i class="fab fa-linkedin fa-lg"></i></a>
+      </div>
+      <div>© Vintage, 2025</div>
+    </div>
+  </div>
+</footer>
+
+
+    <a href="../cart.html"
+        class="fixed bottom-4 right-4 bg-[#b79e78] text-white rounded-full shadow-lg w-[60px] h-[60px] flex items-center justify-center z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cart text-white"
+            viewBox="0 0 16 16">
+            <path
+                d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .49.598l-1.5 7A.5.5 0 0 1 13 13H4a.5.5 0 0 1-.49-.402L1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 6l1.313 6h8.17l1.313-6H3.102z" />
+            <path d="M5 12a2 2 0 1 0 4 0H5zm6 0a2 2 0 1 0 4 0h-4z" />
+        </svg>
+    </a>
+
+</body>
+</html>
