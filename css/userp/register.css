@@ -10,28 +10,30 @@
     box-sizing: border-box;
   }
 
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--color-background);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    color: var(--color-text-light);
-  }
+ body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text-light);
+  display: block; 
+  padding: 1rem;
+  min-height: 100vh;
+}
 
-  .register-container {
-    display: flex;
-    background: var(--color-primary-light);
-    border-radius: 15px;
-    box-shadow: 0 12px 25px rgba(92, 69, 55, 0.5);
-    max-width: 800px;
-    width: 90vw;
-    height: 600px;
-    overflow: hidden;
-    color: var(--color-primary-dark);
-  }
+.register-container {
+  display: flex;
+  flex-direction: row;
+  background: var(--color-primary-light);
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(92, 69, 55, 0.5);
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+  overflow: hidden;
+  color: var(--color-primary-dark);
+  
+}
+
 
 
   #signup-title {
@@ -240,8 +242,8 @@
 
   .back-button {
   position: absolute;
-  top: 19px; 
-  right: 1120px;
+  top: 20px;
+  left: 20px;
   z-index: 1000;
   background: none;
   border: none;

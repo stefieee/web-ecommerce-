@@ -9,6 +9,17 @@
   <link rel="stylesheet" href="styledetail/detail.css" />
 </head>
 
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+
 <body class="bg-gray-50 min-h-screen flex flex-col items-center p-4 sm:p-6">
 
   <main class="w-full max-w-6xl bg-white rounded-lg shadow-md grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 p-4 sm:p-6 md:p-10 relative">
@@ -170,7 +181,7 @@
 </button>
 
 
-    <div class="overflow-hidden">
+   <div class="overflow-x-auto scrollbar-hide">
       <div id="ratingWrapper" class="flex w-max transition-transform duration-500 ease-in-out">
         <div id="ratingContainer" class="flex gap-6">
 
@@ -187,25 +198,29 @@
           </div>
 
 
-          <div class="min-w-[300px] bg-white rounded-lg p-4 shadow border flex-shrink-0 mr-6">
+          <div class="min-w-[250px] sm:min-w-[300px] bg-white rounded-lg p-4 shadow border flex-shrink-0 mr-4">
+
             <p class="text-gray-700 mb-2">“Pas banget sama ukuran tubuhku. Suka banget!”</p>
             <div class="text-yellow-500">★★★★★</div>
             <p class="text-sm text-gray-500 mt-2">– jaya, seminggu lalu</p>
           </div>
 
-          <div class="min-w-[300px] bg-white rounded-lg p-4 shadow border flex-shrink-0 mr-6">
+          <div class="min-w-[250px] sm:min-w-[300px] bg-white rounded-lg p-4 shadow border flex-shrink-0 mr-4">
+
             <p class="text-gray-700 mb-2">“Bagus y ok”</p>
             <div class="text-yellow-500">★★★★★</div>
             <p class="text-sm text-gray-500 mt-2">– Maheka, seminggu lalu</p>
           </div>
 
-          <div class="min-w-[300px] bg-white rounded-lg p-4 shadow border flex-shrink-0 mr-6">
+         <div class="min-w-[250px] sm:min-w-[300px] bg-white rounded-lg p-4 shadow border flex-shrink-0 mr-4">
+
             <p class="text-gray-700 mb-2">“cocok bgt tengs vintage”</p>
             <div class="text-yellow-500">★★★★★</div>
             <p class="text-sm text-gray-500 mt-2">– nanta, seminggu lalu</p>
           </div>
 
-          <div class="min-w-[300px] bg-white rounded-lg p-4 shadow border flex-shrink-0 mr-6">
+         <div class="min-w-[250px] sm:min-w-[300px] bg-white rounded-lg p-4 shadow border flex-shrink-0 mr-4">
+
             <p class="text-gray-700 mb-2">“slebew”</p>
             <div class="text-yellow-500">★★★★★</div>
             <p class="text-sm text-gray-500 mt-2">– stefie, seminggu lalu</p>
