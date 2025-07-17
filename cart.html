@@ -1,212 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Product Popup - Suilven Quilted Jacket</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  body {
-    background-color: #d9d7d484;
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  /* Scrollbar removed for pop up panel */
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  /* Custom radio buttons for size and color */
-  input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    background-color: #fafafa;
-    margin: 0 6px 0 0;
-    font: inherit;
-    color: #444;
-    width: 30px;
-    height: 30px;
-    border: 1.8px solid #ccc;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  input[type="radio"]:checked {
-    border-color: #000;
-    box-shadow: 0 0 0 3px #00000033;
-  }
-  input[type="radio"]:checked::after {
-    content: "";
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: #000;
-    position: absolute;
-    top: 7px;
-    left: 7px;
-  }
-  /* Color selectors as circles */
-  input.color-radio {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    margin-right: 15px;
-  }
-  /* Colors for color choices */
-  #color-brown {
-    background-color: #7a5035;
-  }
-  #color-black {
-    background-color: #181818;
-  }
-  #color-blue {
-    background-color: #2234a1;
-  }
-  input.color-radio:checked {
-    border-color: black;
-  }
-  /* Accordion style details */
-  details summary {
-    cursor: pointer;
-    font-weight: 600;
-    margin-bottom: 6px;
-    list-style: none;
-  }
-  details summary::-webkit-details-marker {
-    display:none;
-  }
-  details[open] summary::after {
-    content: "−";
-    float: right;
-    font-weight: 700;
-  }
-  details summary::after {
-    content: "+";
-    float: right;
-    font-weight: 700;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopping Cart UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    input:focus {
+      outline: 2px solid #cbbca9;
+      outline-offset: 0;
+    }
+  </style>
 </head>
-<body>
-  <main class="max-w-7xl mx-auto bg-white rounded-lg shadow-lg flex max-h-[600px] h-full lg:h-[600px]">
-    <!-- Left Info Panel -->
-    <section class="flex flex-col flex-shrink-0 w-1/4 p-8 border-r border-gray-200 text-gray-900">
-      <nav class="text-xs text-gray-500 mb-6 select-none" aria-label="Breadcrumb">
-        Home / Category / Jackets
-      </nav>
-      <h1 class="font-semibold text-2xl mb-2 leading-tight">Suilven Quilted Jacket</h1>
-      <p class="font-bold text-xl mb-10">€1,192.00</p>
+<body class="bg-white min-h-screen flex items-center justify-center p-6 text-gray-900">
+  <div class="max-w-7xl w-full bg-white rounded-3xl p-4 sm:p-6 md:p-8 flex flex-col md:flex-row gap-8 md:gap-16 shadow-lg">
 
-      <details class="mb-6" open>
-        <summary>Product Info</summary>
-        <p class="mt-2 text-sm leading-relaxed font-normal">
-          Cropped quilted jacket in textured nylon with asymmetrical stitch detailing. Model is 190cm (6ft3) and is wearing size M.
-        </p>
-      </details>
 
-      <details class="mb-6">
-        <summary>Details</summary>
-        <p class="mt-2 text-sm leading-relaxed font-normal">
-          Outer: 100% nylon. Lining: 100% nylon. Padding: 100% polyester. Machine wash cold, do not tumble dry.
-        </p>
-      </details>
+    <!-- LEFT: Shopping Cart -->
+   <section class="w-full md:flex-1 min-w-0">
 
-      <details>
-        <summary>Delivery & Returns</summary>
-        <p class="mt-2 text-sm leading-relaxed font-normal">
-          Free delivery over €99. Returns accepted within 30 days of purchase.
-        </p>
-      </details>
+      <button class="flex items-center gap-2 text-[#8a7f6e] font-medium mb-8 hover:text-[#6c6457] transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+        </svg>
+        <a href="index.html" class="text-sm">Continue Shopping</a>
+      </button>
+
+      <h2 class="text-2xl font-semibold mb-1">Shopping Cart</h2>
+      <p class="text-sm text-gray-500 mb-6">You have 3 items in your cart</p>
+
+      <ul class="space-y-5 max-h-[480px] overflow-y-auto no-scrollbar">
+        <!-- Cart Items (Tetap putih dan clean) -->
+        <li class="flex items-center gap-6 bg-white rounded-xl shadow-md p-4" data-price="249000">
+          <img src="images/populer(1).avif" class="w-16 h-16 object-contain rounded-lg" />
+          <div class="flex-grow">
+            <h3 class="font-semibold text-lg">AIRism Katun T-Shirt</h3>
+            <p class="text-sm text-gray-500">M , Brown</p>
+          </div>
+          <div class="flex items-center gap-2 font-medium select-none">
+            <button class="text-2xl px-2 hover:text-[#cbbca9]" aria-label="Decrease quantity">−</button>
+            <input type="text" value="1" readonly class="w-7 text-center bg-gray-100 rounded border border-gray-300" />
+            <button class="text-2xl px-2 hover:text-[#cbbca9]" aria-label="Increase quantity">+</button>
+          </div>
+          <span class="font-semibold min-w-[90px] text-right">Rp.249.000</span>
+          <button class="text-gray-400 hover:text-red-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </li>
+
+        <!-- Item 2 -->
+        <li class="flex items-center gap-6 bg-white rounded-xl shadow-md p-4" data-price="199000">
+          <img src="images/populer2.avif" class="w-16 h-16 object-contain rounded-lg" />
+          <div class="flex-grow">
+            <h3 class="font-semibold text-lg">Kemeja Polo Mini</h3>
+            <p class="text-sm text-gray-500">L , Blue</p>
+          </div>
+          <div class="flex items-center gap-2 font-medium select-none">
+            <button class="text-2xl px-2 hover:text-[#cbbca9]" aria-label="Decrease quantity">−</button>
+            <input type="text" value="1" readonly class="w-7 text-center bg-gray-100 rounded border border-gray-300" />
+            <button class="text-2xl px-2 hover:text-[#cbbca9]" aria-label="Increase quantity">+</button>
+          </div>
+          <span class="font-semibold min-w-[90px] text-right">Rp.199.000</span>
+          <button class="text-gray-400 hover:text-red-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </li>
+
+        <!-- Item 3 -->
+        <li class="flex items-center gap-6 bg-white rounded-xl shadow-md p-4" data-price="399000">
+          <img src="images/prod.avif" class="w-16 h-16 object-contain rounded-lg" />
+          <div class="flex-grow">
+            <h3 class="font-semibold text-lg">Rayon Blouse | Stripe</h3>
+            <p class="text-sm text-gray-500">M , Blue</p>
+          </div>
+          <div class="flex items-center gap-2 font-medium select-none">
+            <button class="text-2xl px-2 hover:text-[#cbbca9]" aria-label="Decrease quantity">−</button>
+            <input type="text" value="1" readonly class="w-7 text-center bg-gray-100 rounded border border-gray-300" />
+            <button class="text-2xl px-2 hover:text-[#cbbca9]" aria-label="Increase quantity">+</button>
+          </div>
+          <span class="font-semibold min-w-[90px] text-right">Rp.399.000</span>
+          <button class="text-gray-400 hover:text-red-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </section>
 
-    <!-- Center Image Panel -->
-    <section class="flex justify-center flex-grow p-8">
-      <div class="w-[300px] sm:w-[380px] flex items-center justify-center">
-        <img 
-          src="https://placehold.co/380x500?text=Brown+Quilted+Jacket+on+Model+Standing+Neutral+Pose" 
-          alt="Model wearing a brown cropped quilted jacket with asymmetrical stitch detailing on neutral grey background" 
-          class="object-contain h-full max-h-[500px] rounded-md shadow-md" />
+    <!-- RIGHT: Total & Payment -->
+    <section class="w-full max-w-md bg-[#cbbca9] rounded-3xl p-8 flex flex-col gap-6 text-gray-900 shadow-xl">
+      <h3 class="font-semibold text-lg mb-4">Card Details</h3>
+
+      <!-- Opsi Metode Pembayaran -->
+      <div class="space-y-3 text-sm">
+        <label class="flex items-center gap-3">
+          <input type="radio" name="payment" value="transfer" checked class="accent-[#8a7f6e]" />
+          <span>Transfer Bank</span>
+        </label>
+        <label class="flex items-center gap-3">
+          <input type="radio" name="payment" value="cod" class="accent-[#8a7f6e]" />
+          <span>COD (Bayar di Tempat)</span>
+        </label>
       </div>
-    </section>
 
-    <!-- Right Details Panel -->
-    <section class="flex flex-col flex-shrink-0 w-1/4 p-8 border-l border-gray-200 text-gray-900 select-none">
-      <form class="flex flex-col h-full justify-between">
-        <div>
-          <div class="flex justify-between items-center mb-3">
-            <span class="text-sm font-semibold">Choose Size</span>
-            <button type="button" class="text-xs underline underline-offset-2 text-gray-500 hover:text-black transition">Size Guide</button>
-          </div>
-          <fieldset class="flex gap-2 mb-8" aria-label="Choose size">
-            <label for="size-xs" class="cursor-pointer" title="Extra Small Size XS">XS
-              <input type="radio" id="size-xs" name="size" value="XS" />
-            </label>
-            <label for="size-s" class="cursor-pointer" title="Small Size S">S
-              <input type="radio" id="size-s" name="size" value="S" />
-            </label>
-            <label for="size-m" class="cursor-pointer" title="Medium Size M">
-              M
-              <input type="radio" id="size-m" name="size" value="M" checked />
-            </label>
-            <label for="size-l" class="cursor-pointer" title="Large Size L">L
-              <input type="radio" id="size-l" name="size" value="L" />
-            </label>
-            <label for="size-xl" class="cursor-pointer" title="Extra Large Size XL">XL
-              <input type="radio" id="size-xl" name="size" value="XL" />
-            </label>
-            <label for="size-xxl" class="cursor-pointer" title="Double Extra Large Size XXL">XXL
-              <input type="radio" id="size-xxl" name="size" value="XXL" />
-            </label>
-          </fieldset>
-
-          <div class="mb-6">
-            <span class="text-sm font-semibold mb-1 block">Choose Color</span>
-            <fieldset class="flex gap-5" aria-label="Choose color">
-              <label for="color-brown" class="cursor-pointer" title="Brown color choice">
-                <input type="radio" class="color-radio" name="color" id="color-brown" value="brown" checked />
-              </label>
-              <label for="color-black" class="cursor-pointer" title="Black color choice">
-                <input type="radio" class="color-radio" name="color" id="color-black" value="black" />
-              </label>
-              <label for="color-blue" class="cursor-pointer" title="Blue color choice">
-                <input type="radio" class="color-radio" name="color" id="color-blue" value="blue" />
-              </label>
-            </fieldset>
-          </div>
+      <!-- Ringkasan Harga -->
+      <div class="mt-4 border-t border-[#b9ae98] pt-4 space-y-2">
+        <div class="flex justify-between text-sm font-medium">
+          <span>Subtotal</span>
+          <span id="subtotal">Rp0</span>
         </div>
+        <div class="flex justify-between text-sm font-medium">
+          <span>Shipping</span>
+          <span id="shipping">Rp20.000</span>
+        </div>
+        <div class="flex justify-between text-lg font-semibold">
+          <span>Total (tax incl.)</span>
+          <span id="total">Rp0</span>
+        </div>
+      </div>
 
-        <footer class="pt-2">
-          <p class="mb-5 text-xs text-gray-400 font-light select-text">
-            All contents of this website are the property of A-COLD-WALL*
-          </p>
-
-          <div class="flex items-center gap-4">
-            <button 
-              type="button" 
-              aria-label="Add product to cart"
-              class="flex-grow bg-black text-white py-3 rounded-full font-semibold hover:bg-gray-900 transition-shadow shadow-md active:shadow-inner focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2">
-              Add to Cart
-            </button>
-
-            <button 
-              type="button" 
-              aria-label="Add to favorites"
-              class="w-12 h-12 flex items-center justify-center border border-gray-300 rounded-full hover:border-black transition"
-              title="Add to favorites (wish list)">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-              </svg>
-            </button>
-          </div>
-        </footer>
-      </form>
+      <!-- Tombol Checkout -->
+      <button
+        type="button"
+        class="mt-8 bg-[#8a7f6e] hover:bg-[#7c7263] active:scale-[0.98] transition-transform w-full rounded-2xl py-4 text-white font-semibold flex justify-center items-center gap-4 shadow-lg"
+        aria-label="Checkout"
+      >
+        <span id="checkout-total" class="text-lg">Rp0</span>
+        <span class="text-sm tracking-wider">Checkout</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
     </section>
-  </main>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    function formatRupiah(n) {
+      return 'Rp' + n.toLocaleString('id-ID');
+    }
+
+    function updateTotal() {
+      let subtotal = 0;
+      document.querySelectorAll('li[data-price]').forEach(item => {
+        const price = parseInt(item.dataset.price);
+        const qty = parseInt(item.querySelector('input[type="text"]').value);
+        subtotal += price * qty;
+      });
+
+      const shipping = 20000;
+      const total = subtotal + shipping;
+
+      document.getElementById('subtotal').textContent = formatRupiah(subtotal);
+      document.getElementById('shipping').textContent = formatRupiah(shipping);
+      document.getElementById('total').textContent = formatRupiah(total);
+      document.getElementById('checkout-total').textContent = formatRupiah(total);
+    }
+
+    document.querySelectorAll('li[data-price]').forEach(item => {
+      const minusBtn = item.querySelector('button[aria-label="Decrease quantity"]');
+      const plusBtn = item.querySelector('button[aria-label="Increase quantity"]');
+      const quantityInput = item.querySelector('input[type="text"]');
+
+      plusBtn.addEventListener('click', () => {
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+        updateTotal();
+      });
+
+      minusBtn.addEventListener('click', () => {
+        const current = parseInt(quantityInput.value);
+        if (current > 1) {
+          quantityInput.value = current - 1;
+          updateTotal();
+        }
+      });
+    });
+
+    updateTotal();
+  </script>
 </body>
 </html>
-
